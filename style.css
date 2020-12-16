@@ -13,12 +13,17 @@
 	Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
+/* Font import */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 /* Global */
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Playfair display', serif;
 }
 
 button {
@@ -30,6 +35,243 @@ button, input {
     outline: none;
 }
 
-h1 {
-    color: red;
+body {
+    position: relative;
+}
+
+.gold {
+    display: block;
+    color: #907B55;
+    font-size: 32px;
+}
+
+/* Header */
+
+.container {
+    width: 1500px;
+    margin: 40px auto 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header .mainMenu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.header .mainMenu ul li {
+    margin: 0 20px;
+    text-align: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .mainMenu ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.header .mainMenu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transform-origin: 50%;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    background: #907B55;
+    transition: .2s ease-in-out;
+}
+
+/* Landing */
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 730px;
+    margin-top: 30px;
+}
+
+.landing .landingBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.landing .landingTextMain {
+    font-size: 50px;
+    position: absolute;
+    top: 100px;
+    left: 8%;
+    color: #363533;
+    text-shadow: 0 0 5px #907B5526;
+}
+
+.landing .landingTextMain .gold {
+    font-size: inherit;
+}
+
+.landing .landingTextMain::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -150px;
+    width: 350px;
+    height: 1px;
+    background: #907B55;
+}
+
+.landing .landingTextMinor {
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top: 380px;
+    left: 8%;
+    color: #363533;
+    width: 500px;
+}
+
+/* Aktualności */
+
+.aktualnosci {
+    width: 100%;
+    background: #F4F4F4;
+    min-height: 600px; /* TMP */
+    color: #363533 !important;
+    padding: 50px 100px;
+}
+
+.aktualnosci .aktualnosciHeader {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.aktualnosci .aktualnosciText {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 40px 0;
+    width: 500px;
+}
+
+.aktualnosci .aktualnosciContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem {
+    margin: 30px 0;
+    width: 25%;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle {
+    position: relative;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background: #907B55;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciDate {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciExcerpt {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .readMoreBtn {
+    font-size: 16px;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: 1px solid #363533;
+    margin-top: 30px;
+    position: relative;
+}
+
+.aktualnosci .allArticlesBtn {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background: #B1A38A;
+    font-weight: 700;
+    color: #363533;
+    position: relative;
+    transition: .6s;
+}
+
+/* Read more hover effect */
+
+.borderBtn::before, .borderBtn::after {
+    box-sizing: inherit;
+    position: absolute;
+    content: '';
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.borderBtn::after {
+    bottom: 0;
+    right: 0;
+}
+
+.borderBtn::before {
+    top: 0;
+    left: 0;
+}
+
+.borderBtn:hover::before, .borderBtn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.borderBtn:hover {
+    border: none;
+}
+
+.borderBtn:hover::before {
+    border-top-color: #907B55;
+    border-right-color: #907B55;
+    transition: width 0.1s ease-out, height 0.1s ease-out 0.1s;
+}
+
+.borderBtn:hover::after {
+    border-bottom-color: #907B55;
+    border-left-color: #907B55;
+    transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.6s;
+}
+
+.allArticlesBtn:hover {
+    background: #A28967;
 }

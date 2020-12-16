@@ -7,5 +7,24 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<body>
+<div class="container">
+<header class="header">
+    <h1 class="logo">
+        Lorem ipsum<br/>
+        Dolor sit amet
+        <span class="gold">Strona internetowa</span>
+    </h1>
+
+    <menu class="mainMenu">
+        <ul>
+            <li onclick="handleMenu(1)">Aktualności</li>
+            <li onclick="handleMenu(2)">Turzno</li>
+            <li onclick="handleMenu(3)">Deklaracja</li>
+            <li onclick="handleMenu(4)">Galeria</li>
+            <li onclick="handleMenu(5)">Komitet honorowy</li>
+            <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
+            <li onclick="handleMenu(7)">Kontakt</li>
+        </ul>
+    </menu>
+</header>
