@@ -9,6 +9,8 @@
 
 <body>
 <div class="container">
+
+<!-- HEADER -->
 <header class="header">
     <h1 class="logo">
         Lorem ipsum<br/>

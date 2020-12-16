@@ -35,6 +35,11 @@ button, input {
     outline: none;
 }
 
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 body {
     position: relative;
 }
@@ -182,7 +187,14 @@ body {
     font-weight: 400;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle::after {
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a::after {
     content: "";
     position: absolute;
     bottom: -15px;
@@ -190,6 +202,12 @@ body {
     width: 80px;
     height: 1px;
     background: #907B55;
+    transition: .3s;
+    transform-origin: 0;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a:hover::after {
+    transform: scaleX(1.5);
 }
 
 .aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciDate {
@@ -207,13 +225,22 @@ body {
     font-size: 16px;
     width: 100%;
     height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-transform: uppercase;
     border: 1px solid #363533;
     margin-top: 30px;
     position: relative;
+}
+
+.aktualnosci .aktualnosciContainer .aktualnosciItem .readMoreBtn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .aktualnosci .allArticlesBtn {

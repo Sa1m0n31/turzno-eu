@@ -22,7 +22,41 @@ get_header();
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <div class="aktualnosciContainer">
-        <div class="aktualnosciItem">
+        <?php
+            $mainQuery = new WP_Query(array(
+                    'posts_per_page' => 3
+            ));
+
+            if($mainQuery->have_posts()) {
+                while($mainQuery->have_posts()) {
+                    $mainQuery->the_post();
+                    ?>
+                    <div class="aktualnosciItem">
+                        <h2 class="aktualnosciTitle">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php echo the_title(); ?>
+                            </a>
+                        </h2>
+                        <h3 class="aktualnosciDate">
+                            <?php echo get_the_date(); ?>
+                        </h3>
+                        <p class="aktualnosciExcerpt">
+                            <?php echo the_excerpt(); ?>
+                        </p>
+                        <button class="readMoreBtn borderBtn">
+                            <a href="<?php echo the_permalink(); ?>">
+                                Czytaj dalej
+                            </a>
+                        </button>
+                    </div>
+
+        <?php
+                    wp_reset_postdata();
+                }
+            }
+        ?>
+
+        <!--<div class="aktualnosciItem">
             <h2 class="aktualnosciTitle">Lorem ipsum tytuł</h2>
             <h3 class="aktualnosciDate">15.12.2020</h3>
             <p class="aktualnosciExcerpt">
@@ -42,18 +76,7 @@ get_header();
             <button class="readMoreBtn borderBtn">
                 Czytaj dalej
             </button>
-        </div>
-
-        <div class="aktualnosciItem">
-            <h2 class="aktualnosciTitle">Lorem ipsum tytuł</h2>
-            <h3 class="aktualnosciDate">15.12.2020</h3>
-            <p class="aktualnosciExcerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <button class="readMoreBtn borderBtn">
-                Czytaj dalej
-            </button>
-        </div>
+        </div>-->
     </div>
     <button class="allArticlesBtn borderBtn">Zobacz wszystkie artykuły</button>
 </section>
