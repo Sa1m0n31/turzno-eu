@@ -16,6 +16,7 @@
 /* Font import */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Global */
 
@@ -24,6 +25,10 @@
     padding: 0;
     margin: 0;
     font-family: 'Playfair display', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -50,23 +55,36 @@ body {
     font-size: 32px;
 }
 
+#deklaracja, #galeria, #komitetHonorowy, #sponsorzySpoleczni, #kontakt {
+    position: absolute;
+    top: -180px;
+    left: 0;
+}
+
 /* Header */
 
 .container {
     width: 1500px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    height: 170px;
+    background: #fff;
+    padding: 30px 0;
 }
 
 .header .logo {
     font-size: 24px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .header .mainMenu ul {
@@ -98,13 +116,49 @@ body {
     transition: .2s ease-in-out;
 }
 
+/* Landing - lines */
+
+.line {
+    position: absolute;
+    height: 1px;
+    background: #907B55;
+    display: block;
+    z-index: 4;
+}
+
+.big {
+    width: 400px;
+    top: 0;
+}
+
+.small {
+    width: 250px;
+    top: 30px;
+}
+
+.left {
+    left: -100px;
+}
+
+.right {
+    right: -100px;
+}
+
+.smallLeft {
+    left: -50px;
+}
+
+.smallRight {
+    right: -50px;
+}
+
 /* Landing */
 
 .landing {
     position: relative;
     width: 100%;
     height: 730px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .landing .landingBackground {
@@ -153,14 +207,17 @@ body {
 .aktualnosci {
     width: 100%;
     background: #F4F4F4;
-    min-height: 600px; /* TMP */
     color: #363533 !important;
     padding: 50px 100px;
+    margin-top: 50px;
+    min-height: 800px;
+    position: relative;
 }
 
-.aktualnosci .aktualnosciHeader {
-    font-size: 40px;
-    font-weight: 700;
+#aktualnosci {
+    position: absolute;
+    top: -180px;
+    left: 0;
 }
 
 .aktualnosci .aktualnosciText {
@@ -301,4 +358,318 @@ body {
 
 .allArticlesBtn:hover {
     background: #A28967;
+}
+
+/* Turzno */
+
+.turzno {
+    background: #F4F4F4;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    margin: 30px 0;
+    position: relative;
+}
+
+#turzno {
+    position: absolute;
+    top: -180px;
+    left: 0;
+}
+
+.left, .right {
+    width: 40%;
+}
+
+.sectionTitle {
+    font-weight: 700;
+    font-size: 40px;
+    color: #363533;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -200px;
+    width: 310px;
+    height: 1px;
+    background: #907B55;
+}
+
+.sectionTitle::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: -150px;
+    width: 340px;
+    height: 1px;
+    background: #907B55;
+}
+
+.sectionIntro {
+    margin: 50px 0 40px 0;
+    font-weight: 300;
+    max-width: 500px;
+}
+
+.turzno .turznoParagraph {
+    margin: 40px 0;
+}
+
+.turzno .turznoParagraph .turznoParagraphTitle {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.turzno .turznoParagraphText {
+    margin: 5px 0;
+    font-weight: 300;
+}
+
+.turzno .right img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 15px #0000004D;
+}
+
+.turzno .textInside {
+    margin-top: 20px;
+}
+
+/* Deklaracja */
+
+.deklaracja {
+    margin-top: 50px;
+    padding: 50px 100px;
+    background: #F4F4F4;
+    color: #363533 !important;
+    position: relative;
+}
+
+.deklaracja .deklaracjaTitle {
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.deklaracja .deklaracjaTitle::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -170px;
+    width: 440px;
+    height: 1px;
+    background: #907B55;
+}
+
+.deklaracja .deklaracjaContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deklaracja .deklaracjaLeft, .deklaracja .deklaracjaRight {
+    width: 45%;
+    margin-top: 30px;
+}
+
+.deklaracja .deklaracjaP {
+    margin: 20px 0;
+}
+
+/* Galeria */
+
+.galeria {
+    margin-top: 50px;
+    background: #F4F4F4;
+    padding: 50px 100px;
+    position: relative;
+}
+
+.galeriaContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: repeat(2, 300px);
+    grid-column-gap: 110px;
+    grid-row-gap: 110px;
+    justify-content: center;
+}
+
+.galeriaContainer .galeriaItem {
+    position: relative;
+}
+
+.galeriaContainer .galeriaItem img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000000BF;
+}
+
+.galeriaContainer .galeriaItem .overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 3;
+    transition: .4s;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.galeriaContainer .galeriaItem .overlay .galleryName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.galeriaContainer .galeriaItem:hover .overlay {
+    display: block;
+    opacity: 1;
+}
+
+/* Komitet honorowy */
+
+.komitetHonorowy {
+    margin-top: 50px;
+    background: #F4F4F4;
+    padding: 50px 100px;
+    position: relative;
+    color: #363533 !important;
+}
+
+.komitetHonorowy * {
+    z-index: 3;
+}
+
+.komitetHonorowy .komitetHonorowyBackground {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: auto;
+    display: block;
+}
+
+.komitetHonorowyContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.komitetHonorowyContainer .komitetHonorowyLeft, .komitetHonorowyContainer .komitetHonorowyRight {
+    width: 45%;
+}
+
+.komitetHonorowyItem {
+    position: relative;
+    margin: 60px 0;
+}
+
+.komitetHonorowyItem::after {
+    content: "";
+    position: absolute;
+    width: 370px;
+    height: 1px;
+    background: #907B55;
+}
+
+.komitetHonorowyLeft .komitetHonorowyItem::after {
+    bottom: -20px;
+    left: -150px;
+}
+
+.komitetHonorowyRight .komitetHonorowyItem::after {
+    bottom: -20px;
+    right: -150px;
+}
+
+.komitetHonorowyItem .name {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.komitetHonorowyItem .description {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Sponsorzy społeczni */
+
+.sponsorzySpoleczni {
+    margin-top: 50px;
+    background: #F4F4F4;
+    padding: 50px 100px;
+    position: relative;
+}
+
+.sponsorzySpoleczniContainer {
+    margin: 50px auto 0 auto;
+    width: 850px;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+}
+
+.sponsorzySpoleczniItem {
+    position: relative;
+    cursor: pointer;
+}
+
+.sponsorzySpoleczniItem img {
+    width: 100%;
+    height: 100%;
+}
+
+.sponsorzySpoleczniItem .overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 3;
+}
+
+.sponsorzySpoleczniItem .overlay .sponsorName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sponsorzySpoleczniItem:hover .overlay {
+    opacity: 1;
+}
+
+/* Kontakt */
+
+.kontakt {
+    margin-top: 50px;
+    background: #F4F4F4;
+    width: 100%;
+    height: 500px; /* TMP */
+    padding: 50px 100px;
+    position: relative;
 }

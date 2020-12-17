@@ -105,6 +105,32 @@ if ( ! function_exists( 'turzno_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'turzno_setup' );
 
+function turzno_add_komitet_honorowy_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Komitet honrowy'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-calendar-alt'
+    );
+
+    register_post_type("Komitet honorowy", $args);
+}
+
+add_action("init", "turzno_add_komitet_honorowy_post_type");
+
+
 /**
  * Enqueue scripts and styles.
  */

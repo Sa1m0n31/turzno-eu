@@ -12,7 +12,7 @@
 
 <!-- HEADER -->
 <header class="header">
-    <h1 class="logo">
+    <h1 class="logo" onclick="handleMenu(8)">
         Lorem ipsum<br/>
         Dolor sit amet
         <span class="gold">Strona internetowa</span>

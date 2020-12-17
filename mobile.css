@@ -4,6 +4,10 @@
         width: 85vw;
     }
 
+    .sectionTitle {
+        margin-bottom: 20px;
+    }
+
     /* Header */
 
     .header .logo {
@@ -20,8 +24,12 @@
         height: calc(85vw / 1.89);
     }
 
-    .landing .landingTextMain::after {
-        display: none;
+    .landing .landingTextMain::after,
+    .sectionTitle::after,
+    .sectionTitle::before,
+    .deklaracja .deklaracjaTitle::before
+    {
+        display: none !important;
     }
 
     .landing .landingBackground {
@@ -59,6 +67,12 @@
     .aktualnosci .allArticlesBtn {
         font-size: calc(20px + 12 * ((100vw - 400px)/(1200)));
     }
+
+    /* Galeria */
+    .galeria .galeriaContainer {
+        grid-template-columns: repeat(2, 360px);
+        grid-template-rows: repeat(3, 300px);
+    }
 }
 
 @media(max-width: 1400px) {
@@ -85,9 +99,44 @@
     .aktualnosci .aktualnosciContainer .aktualnosciItem:last-child {
         display: none;
     }
+
+    /* Galeria */
+    .galeria .galeriaContainer {
+        grid-template-columns: repeat(2, calc((85vw - 200px) / 2 - 20px));
+        grid-template-rows: repeat(3, calc(((85vw - 200px) / 2 - 20px) / 1.2));
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    /* Spoleczni sponsorzy */
+    .sponsorzySpoleczniContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-row-gap: 0;
+        grid-column-gap: 0;
+        width: auto;
+    }
+
+    .sponsorzySpoleczniItem {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
+
+    .sponsorzySpoleczniItem .overlay .sponsorName {
+        font-size: 18px !important;
+    }
 }
 
 @media(max-width: 900px) {
+    /* Global */
+    section {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin-top: 15px !important;
+    }
+
     /* Aktualnosci */
     .aktualnosci .aktualnosciContainer {
         flex-direction: column;
@@ -111,6 +160,58 @@
         text-align: center;
         margin: 30px auto;
     }
+
+    /* Turzno */
+    .turzno, .deklaracjaContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deklaracja .deklaracjaLeft,
+    .deklaracja .deklaracjaRight,
+    .turzno .left,
+    .turzno .right {
+        width: 100% !important;
+    }
+
+    .turzno .right {
+        margin-top: 20px;
+    }
+
+    .sectionTitle {
+        margin-bottom: 40px !important;
+        font-size: 25px !important;
+    }
+
+    /* Deklaracja */
+    .deklaracja .deklaracjaTitle {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    /* Komitet honorowy */
+    .komitetHonorowyItem::after {
+        width: 220px;
+    }
+
+    .komitetHonorowyLeft .komitetHonorowyItem::after {
+        bottom: -20px;
+        left: -50px;
+    }
+
+    .komitetHonorowyRight .komitetHonorowyItem::after {
+        bottom: -20px;
+        right: -50px;
+    }
+
+    .komitetHonorowyItem .name {
+        font-size: 22px;
+    }
+
+    .komitetHonorowyItem .description {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 700px) {
@@ -121,5 +222,40 @@
 
     .aktualnosci .aktualnosciContainer .aktualnosciItem {
         width: 100%;
+    }
+
+    /* Galeria */
+    .galeria .galeriaContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeria .galeriaContainer .galeriaItem {
+        margin: 20px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Komitet honorowy */
+    .komitetHonorowyContainer {
+        flex-direction: column;
+    }
+
+    .komitetHonorowyContainer .komitetHonorowyLeft, .komitetHonorowyContainer .komitetHonorowyRight {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+    /* Spoleczni sponsorzy */
+    .sponsorzySpoleczniContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sponsorzySpoleczniItem {
+        width: 200px;
+        height: 200px;
+        margin: 15px;
     }
 }
