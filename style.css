@@ -27,6 +27,10 @@
     font-family: 'Playfair display', serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
@@ -45,6 +49,10 @@ a {
     color: inherit !important;
 }
 
+button, a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 body {
     position: relative;
 }
@@ -61,11 +69,26 @@ body {
     left: 0;
 }
 
+.moveUpBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    background-color: #907B55;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+}
+
 /* Header */
 
 .container {
     width: 1500px;
     margin: 0 auto 0 auto;
+    position: relative;
 }
 
 .header {
@@ -79,6 +102,10 @@ body {
     height: 170px;
     background: #fff;
     padding: 30px 0;
+}
+
+.mobileHeader {
+    display: none;
 }
 
 .header .logo {
@@ -114,6 +141,46 @@ body {
     transform: scaleX(0);
     background: #907B55;
     transition: .2s ease-in-out;
+}
+
+/* Mobile menu */
+
+.mobileMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: .8;
+    z-index: 20;
+    color: #fff !important;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.mobileMenu ul li {
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.mobileMenu .exit {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Landing - lines */
@@ -161,12 +228,16 @@ body {
     margin-top: 10px;
 }
 
-.landing .landingBackground {
+.landing .landingBackground, .landing .landingMobile {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.landing .landingMobile {
+    display: none;
 }
 
 .landing .landingTextMain {
@@ -236,9 +307,13 @@ body {
 .aktualnosciItem {
     margin: 30px 0;
     width: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.aktualnosciItem .aktualnosciTitle {
+.aktualnosciTitle {
     position: relative;
     font-size: 32px;
     font-weight: 400;
@@ -251,7 +326,7 @@ body {
     display: block;
 }
 
-.aktualnosciItem .aktualnosciTitle a::after {
+.aktualnosciItem .aktualnosciTitle a::after, .articleTitle::after {
     content: "";
     position: absolute;
     bottom: -15px;
@@ -267,7 +342,7 @@ body {
     transform: scaleX(1.5);
 }
 
-.aktualnosciItem .aktualnosciDate {
+.aktualnosciDate {
     font-size: 18px;
     font-weight: 700;
     margin: 30px 0;
@@ -286,6 +361,14 @@ body {
     border: 1px solid #363533;
     margin-top: 30px;
     position: relative;
+    bottom: 0;
+    left: 0;
+    transition: .2s all;
+}
+
+.readMoreBtn:hover {
+    color: #fff;
+    background-color: #907B55;
 }
 
 .aktualnosciItem .readMoreBtn a {
@@ -325,48 +408,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Read more hover effect */
-
-.borderBtn::before, .borderBtn::after {
-    box-sizing: inherit;
-    position: absolute;
-    content: '';
-    border: 2px solid transparent;
-    width: 0;
-    height: 0;
-}
-
-.borderBtn::after {
-    bottom: 0;
-    right: 0;
-}
-
-.borderBtn::before {
-    top: 0;
-    left: 0;
-}
-
-.borderBtn:hover::before, .borderBtn:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
-.borderBtn:hover {
-    border: none;
-}
-
-.borderBtn:hover::before {
-    border-top-color: #907B55;
-    border-right-color: #907B55;
-    transition: width 0.1s ease-out, height 0.1s ease-out 0.1s;
-}
-
-.borderBtn:hover::after {
-    border-bottom-color: #907B55;
-    border-left-color: #907B55;
-    transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.6s;
 }
 
 .allArticlesBtn:hover {
@@ -728,9 +769,71 @@ body {
     margin-top: 50px;
     background: #F4F4F4;
     width: 100%;
-    height: 500px; /* TMP */
     padding: 50px 100px;
     position: relative;
+}
+
+.kontaktContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kontaktContainer .kontaktName {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #363533;
+}
+
+.kontaktContainer .kontaktData {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #363533;
+}
+
+.kontaktContainer .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(-70px);
+}
+
+.kontaktContainer .right .socialMedia {
+    margin-bottom: 30px;
+    width: 55px;
+    height: 55px;
+    transition: .2s;
+}
+
+.kontaktContainer .right .socialMedia:hover {
+    opacity: .8;
+}
+
+.kontaktContainer .left {
+    width: auto;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.footer .credits {
+    color: #919191;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer .wykonanie {
+    font-weight: 600;
+}
+
+.footer .wykonanie a {
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Kurier Turzenski */
@@ -760,4 +863,83 @@ body {
     .archiwum .archiwumContainer .aktualnosciItem {
         width: 26% !important;
     }
+}
+
+/* Single post */
+
+.article {
+    margin: 50px 0;
+    background: #F4F4F4;
+    padding: 50px 100px;
+    color: #363533 !important;
+}
+
+.article .articleTop {
+    display: flex;
+}
+
+.articleTop .left {
+    width: 60%;
+}
+
+.articleTop .right {
+    width: 40%;
+}
+
+.article .articleImg {
+    width: 100%;
+    height: auto;
+}
+
+.article .btn--backToFront {
+    font-size: 16px;
+    width: 45%;
+    height: 52px;
+    text-transform: uppercase;
+    border: 1px solid #907B55;
+    margin: 30px 20px 50px 0;
+    position: relative;
+    transition: .3s all;
+}
+
+.article .btn--backToFront .arrow {
+    margin-right: 20px;
+    font-weight: 900;
+    font-size: 25px;
+    transform: rotate(-90deg);
+}
+
+.article .btn--backToFront:hover {
+    background-color: #907B55;
+    color: #fff;
+}
+
+.article .btn--backToFront a {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article .articleContent {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article .articleContent .left {
+    transform: translateY(-100px);
+}
+
+.article .article > * {
+    width: 50%;
+}
+
+.article .articleContent p {
+    margin-bottom: 20px;
 }

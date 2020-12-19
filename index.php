@@ -1,6 +1,10 @@
 <?php
 get_header();
 ?>
+<!-- MoveUpBtn -->
+<button class="moveUpBtn" onclick="handleMenu(8)">
+    ^
+</button>
 
 <!-- LANDING -->
 <main class="landing">
@@ -9,6 +13,7 @@ get_header();
     <span class="line small left smallLeft"></span>
     <span class="line small right smallRight"></span>
     <img class="landingBackground" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing.png'; ?>" alt="turzno" />
+    <img class="landingMobile" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing-mobile.png'; ?>" alt="turzno" />
     <h1 class="landingTextMain">
         Lorem ipsum<br/>
         Dolor sit amet<br/>
@@ -446,14 +451,6 @@ get_header();
     </div>
 </section>
 
-<!-- KONTAKT -->
-<section class="kontakt">
-    <span id="kontakt"></span>
-    <h2 class="sectionTitle">
-        Kontakt
-    </h2>
-</section>
-
 <?php
 get_footer();
-?>f
+?>

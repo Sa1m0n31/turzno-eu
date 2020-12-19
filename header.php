@@ -14,7 +14,7 @@
 <?php
 if(is_front_page()) {
     ?>
-    <header class="header">
+    <header class="header headerFront">
         <h1 class="logo" onclick="handleMenu(8)">
             Lorem ipsum<br/>
             Dolor sit amet
@@ -34,13 +34,35 @@ if(is_front_page()) {
             </ul>
         </menu>
     </header>
+    <header class="mobileHeader">
+        <div class="hamburgerMenu" onclick="openMenu()">
+            <span class="hamburgerLine"></span>
+            <span class="hamburgerLine"></span>
+            <span class="hamburgerLine"></span>
+        </div>
+        <menu class="mobileMenu" id="menu">
+            <button class="exit" onclick="closeMenu()">
+                x
+            </button>
+            <ul>
+                <li onclick="handleMenu(1)">Aktualności</li>
+                <li onclick="handleMenu(2)">Turzno</li>
+                <li onclick="handleMenu(3)">Deklaracja</li>
+                <li onclick="handleMenu(4)">Galeria</li>
+                <li onclick="handleMenu(5)">Komitet honorowy</li>
+                <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
+                <li onclick="handleMenu(7)">Kontakt</li>
+                <li><a href="/public_html/kurier-turzenski">Kurier Turzeński</a></li>
+            </ul>
+        </menu>
+    </header>
 
     <?php
 }
 else {
     ?>
 
-    <header class="header">
+    <header class="header headerPage">
         <h1 class="logo">
             <a href="/public_html">
                 Lorem ipsum<br/>
@@ -49,7 +71,7 @@ else {
             </a>
         </h1>
 
-        <menu class="mainMenu">
+        <menu class="mainMenu desktopOnly">
             <ul>
                 <li><a href="/public_html/#aktualnosci">Aktualności</a></li>
                 <li><a href="/public_html/#turzno">Turzno</a></li>

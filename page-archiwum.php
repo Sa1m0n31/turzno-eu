@@ -1,7 +1,10 @@
 <?php
 get_header();
 ?>
-
+<!-- MoveUpBtn -->
+<button class="moveUpBtn" onclick="handleMenu(8)">
+    ^
+</button>
 <section class="archiwum">
     <h2 class="sectionTitle">
         Archiwum
