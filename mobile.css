@@ -52,15 +52,15 @@
         font-size: calc(30px + 10 * ((100vw - 400px)/(1200)));
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle {
+    .aktualnosciItem .aktualnosciTitle {
         font-size: calc(20px + 12 * ((100vw - 400px)/(1200)));
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciDate {
+    .aktualnosciItem .aktualnosciDate {
         font-size: calc(16px + 4 * ((100vw - 400px)/(1200)));
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciExcerpt {
+    .aktualnosciItem .aktualnosciExcerpt {
         font-size: calc(15px + 3 * ((100vw - 400px)/(1200)));
     }
 
@@ -72,6 +72,16 @@
     .galeria .galeriaContainer {
         grid-template-columns: repeat(2, 360px);
         grid-template-rows: repeat(3, 300px);
+    }
+
+    /* Video */
+    .videoContainer {
+        width: 100%;
+    }
+
+    .videoContainer iframe {
+        width: 400px;
+        height: 225px;
     }
 }
 
@@ -92,11 +102,11 @@
 
 @media(max-width: 1200px) {
     /* Aktualnosci */
-    .aktualnosci .aktualnosciContainer .aktualnosciItem {
+    .aktualnosciItem {
         width: 40%;
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem:last-child {
+   .aktualnosciItem:last-child {
         display: none;
     }
 
@@ -127,6 +137,22 @@
     .sponsorzySpoleczniItem .overlay .sponsorName {
         font-size: 18px !important;
     }
+
+    /* Video */
+    .videoContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .videoContainer iframe {
+        margin-top: 30px;
+    }
+
+    /* Kurier Turzenski */
+    .kurier {
+        width: 100%;
+    }
 }
 
 @media(max-width: 900px) {
@@ -138,24 +164,24 @@
     }
 
     /* Aktualnosci */
-    .aktualnosci .aktualnosciContainer {
+    .aktualnosci .aktualnosciContainer, .archiwum .archiwumContainer {
         flex-direction: column;
         align-items: center;
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem {
+    .aktualnosciItem {
         width: 80%;
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem:last-child {
+    .aktualnosciItem:last-child {
         display: block;
     }
 
-    .aktualnosci .aktualnosciHeader {
+    .aktualnosciHeader {
         text-align: center;
     }
 
-    .aktualnosci .aktualnosciText {
+    .aktualnosciText {
         width: 80%;
         text-align: center;
         margin: 30px auto;
@@ -220,7 +246,7 @@
         padding: 20px;
     }
 
-    .aktualnosci .aktualnosciContainer .aktualnosciItem {
+    aktualnosciItem {
         width: 100%;
     }
 

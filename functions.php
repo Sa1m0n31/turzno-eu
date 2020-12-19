@@ -7,6 +7,14 @@
  * @package Turzno
  */
 
+// Theme support
+function turzno_theme_support() {
+    // Add theme support
+    add_post_type_support( 'post', 'excerpt' );
+}
+
+add_action("init", "turzno_theme_support");
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );

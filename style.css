@@ -227,31 +227,31 @@ body {
     width: 500px;
 }
 
-.aktualnosci .aktualnosciContainer {
+.aktualnosciContainer, .archiwumContainer {
     display: flex;
     justify-content: space-between;
     margin: 40px 0;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem {
+.aktualnosciItem {
     margin: 30px 0;
     width: 25%;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle {
+.aktualnosciItem .aktualnosciTitle {
     position: relative;
     font-size: 32px;
     font-weight: 400;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a {
+.aktualnosciItem .aktualnosciTitle a {
     position: relative;
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a::after {
+.aktualnosciItem .aktualnosciTitle a::after {
     content: "";
     position: absolute;
     bottom: -15px;
@@ -263,22 +263,22 @@ body {
     transform-origin: 0;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciTitle a:hover::after {
+.aktualnosciItem .aktualnosciTitle a:hover::after {
     transform: scaleX(1.5);
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciDate {
+.aktualnosciItem .aktualnosciDate {
     font-size: 18px;
     font-weight: 700;
     margin: 30px 0;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .aktualnosciExcerpt {
+.aktualnosciItem .aktualnosciExcerpt p {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .readMoreBtn {
+.aktualnosciItem .readMoreBtn {
     font-size: 16px;
     width: 100%;
     height: 52px;
@@ -288,7 +288,7 @@ body {
     position: relative;
 }
 
-.aktualnosci .aktualnosciContainer .aktualnosciItem .readMoreBtn a {
+.aktualnosciItem .readMoreBtn a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -312,6 +312,19 @@ body {
     color: #363533;
     position: relative;
     transition: .6s;
+}
+
+.aktualnosci .allArticlesBtn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Read more hover effect */
@@ -479,6 +492,7 @@ body {
 
 .deklaracja .deklaracjaP {
     margin: 20px 0;
+    font-weight: 300;
 }
 
 /* Galeria */
@@ -497,6 +511,7 @@ body {
     grid-column-gap: 110px;
     grid-row-gap: 110px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .galeriaContainer .galeriaItem {
@@ -507,7 +522,6 @@ body {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    box-shadow: 0 0 10px #000000BF;
 }
 
 .galeriaContainer .galeriaItem .overlay {
@@ -539,7 +553,52 @@ body {
     opacity: 1;
 }
 
-/* Komitet honorowy */
+.galeria .galeriaContainer .ngg-galleryoverview {
+    width: 360px !important;
+    height: 300px !important;
+}
+
+.galeria .galeriaContainer .ngg-galleryoverview * {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Video */
+
+.videoSection, .tiktokSection {
+    margin-top: 50px;
+    background: #F4F4F4;
+    padding: 50px 100px;
+}
+
+.videoContainer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+}
+
+.videoContainer iframe {
+    display: block;
+    width: 560px;
+    height: 315px;
+    -webkit-box-shadow: 0 0 9px 0 #000000;
+    box-shadow: 0 0 9px 0 #000000;
+}
+
+.tiktokContainer {
+    margin-top: 10px;
+}
+
+.tiktok-feed-actions, .tiktok-feed-item {
+    display: none !important;
+}
+
+.tiktok-feed-item:first-child, .tiktok-feed-item:nth-child(2), .tiktok-feed-item:nth-child(3) {
+    display: block !important;
+}
+
+    /* Komitet honorowy */
 
 .komitetHonorowy {
     margin-top: 50px;
@@ -672,4 +731,33 @@ body {
     height: 500px; /* TMP */
     padding: 50px 100px;
     position: relative;
+}
+
+/* Kurier Turzenski */
+
+.kurier {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Archiwum */
+
+.archiwum {
+    background: #F4F4F4;
+    padding: 50px 100px;
+    margin-top: 50px;
+    color: #363533 !important;
+}
+
+.archiwum .archiwumContainer {
+    flex-wrap: wrap;
+}
+
+@media(min-width: 1200px) {
+    .archiwum .archiwumContainer .aktualnosciItem {
+        width: 26% !important;
+    }
 }

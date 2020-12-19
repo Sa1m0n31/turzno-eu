@@ -31,7 +31,8 @@ get_header();
     <div class="aktualnosciContainer">
         <?php
             $mainQuery = new WP_Query(array(
-                    'posts_per_page' => 3
+                    'posts_per_page' => 3,
+                    'category_name' => 'Aktualności'
             ));
 
             if($mainQuery->have_posts()) {
@@ -48,7 +49,7 @@ get_header();
                             <?php echo get_the_date(); ?>
                         </h3>
                         <p class="aktualnosciExcerpt">
-                            <?php echo the_excerpt(); ?>
+                            <?php the_excerpt(); ?>
                         </p>
                         <button class="readMoreBtn borderBtn">
                             <a href="<?php echo the_permalink(); ?>">
@@ -63,7 +64,11 @@ get_header();
             }
         ?>
     </div>
-    <button class="allArticlesBtn borderBtn">Zobacz wszystkie artykuły</button>
+    <button class="allArticlesBtn borderBtn">
+        <a href="/public_html/archiwum">
+            Zobacz wszystkie artykuły
+        </a>
+    </button>
 </section>
 
 <!-- TURZNO -->
@@ -191,63 +196,59 @@ get_header();
 <!-- GALERIA -->
 <section class="galeria">
     <span id="galeria"></span>
+
     <h2 class="sectionTitle">
-        Galeria zdjęć
+        Galeria
     </h2>
     <div class="galeriaContainer">
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
-            </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
 
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
-            </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
+    <?php
 
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
-            </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
+    $gallery = new WP_Query(array(
+       'posts_per_page' => 6,
+       'category_name' => 'Galeria'
+    ));
 
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
-            </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
+    if($gallery->have_posts()) {
+        while($gallery->have_posts()) {
+            $gallery->the_post();
 
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
-            </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
+            ?>
 
-        <div class="galeriaItem">
-            <div class="overlay">
-                <h3 class="galleryName">
-                    Nazwa galerii
-                </h3>
+
+            <div class="galeriaItem">
+                <?php the_content(); ?>
             </div>
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/turzno-1.jpg'; ?>" alt="turzno" />
-        </div>
+
+    <?php
+        }
+    }
+
+    ?>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="videoSection">
+    <h2 class="sectionTitle">
+        Video
+    </h2>
+    <div class="videoContainer">
+        <iframe src="https://www.youtube.com/embed/beKTe3G5kfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <iframe src="https://www.youtube.com/embed/beKTe3G5kfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- TIKTOK -->
+<section class="tiktokSection">
+    <h2 class="sectionTitle">
+        Jesteśmy też na TikToku!
+    </h2>
+    <div class="tiktokContainer">
+        <?php
+            include 'page-tiktok.php';
+        ?>
     </div>
 </section>
 

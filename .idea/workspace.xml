@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e817db4f-4942-4b92-8af2-92226e6e5cdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/order.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/skylo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/turzno-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/turzno-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-archiwum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-kurier-turzenski.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-tiktok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -39,6 +37,7 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/../../wordpress-5.6 (1)/wordpress" />
+      <path value="$USER_HOME$/Downloads/wordpress-5.6 (1)/wordpress" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lhrMwcr9h0rPPU3zIbwudH2ckP" />
@@ -50,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/wordpress-5.6 (1)/wordpress" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -76,6 +75,11 @@
       <workItem from="1608123538080" duration="5962000" />
       <workItem from="1608134636795" duration="380000" />
       <workItem from="1608146755038" duration="13745000" />
+      <workItem from="1608200195476" duration="287000" />
+      <workItem from="1608201123579" duration="596000" />
+      <workItem from="1608212782677" duration="4370000" />
+      <workItem from="1608309511102" duration="6726000" />
+      <workItem from="1608342796968" duration="1201000" />
     </task>
     <servers />
   </component>
@@ -92,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,6 +3,7 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/../../wordpress-5.6 (1)/wordpress" />
+      <path value="$USER_HOME$/Downloads/wordpress-5.6 (1)/wordpress" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
