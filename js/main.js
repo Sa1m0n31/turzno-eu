@@ -1,3 +1,4 @@
+/* MoveUpBtn */
 window.addEventListener("scroll", () => {
     if(window.pageYOffset > 300) {
         document.querySelector(".moveUpBtn").display = "flex";
@@ -5,37 +6,85 @@ window.addEventListener("scroll", () => {
     else {
         document.querySelector(".moveUpBtn").display = "none";
     }
-})
+});
 
+/* Slider */
+document.addEventListener("DOMContentLoaded", () => {
+    const s1 = document.querySelector("#slider1");
+    const s2 = document.querySelector("#slider2");
+    const s3 = document.querySelector("#slider3");
+    const s4 = document.querySelector("#slider4");
+    const s5 = document.querySelector("#slider5");
+
+    const slider = [s1, s2, s3, s4, s5];
+
+    let active = 0, i;
+
+    progressBar();
+    setInterval(() => {
+        active++;
+        if(active === 5) active = 0;
+        for(i=0; i<5; i++) {
+            slider[i].style.opacity = 0;
+        }
+        slider[active].style.opacity = 1;
+        progressBar();
+    }, 5000);
+});
+
+/* Progress bar */
+const progressBar = () => {
+    let width = 0, widthStr;
+    const progress = document.querySelector(".progress");
+    let interval = setInterval(() => {
+        width += 1;
+        widthStr = width + "%";
+        progress.style.width = widthStr;
+    }, 50);
+    setTimeout(() => {
+        clearInterval(interval);
+        progress.style.width = "0";
+    }, 5000);
+}
+
+
+/* Menu */
 const handleMenu = (n) => {
     let el, el2;
     switch(n) {
         case 1:
-            el = document.querySelector("#aktualnosci");
+            //el = document.querySelector("#aktualnosci");
+            el = document.querySelector(".aktualnosci");
             el2 = document.querySelector(".aktualnosci");
             break;
         case 2:
-            el = document.querySelector("#turzno");
+            //el = document.querySelector("#turzno");
+            el = document.querySelector(".turzno");
             el2 = document.querySelector(".turzno");
             break;
         case 3:
-            el = document.querySelector("#deklaracja");
+            //el = document.querySelector("#deklaracja");
+            el = document.querySelector(".deklaracja");
             el2 = document.querySelector(".deklaracja");
             break;
         case 4:
-            el = document.querySelector("#galeria");
+            //el = document.querySelector("#galeria");
+            el = document.querySelector(".galeria");
             el2 = document.querySelector(".galeria");
             break;
         case 5:
-            el = document.querySelector("#komitetHonorowy");
+            //el = document.querySelector("#komitetHonorowy");
+            el = document.querySelector(".komitetHonorowy");
             el2 = document.querySelector(".komitetHonorowy");
             break;
         case 6:
-            el = document.querySelector("#sponsorzySpoleczni");
+            //el = document.querySelector("#sponsorzySpoleczni");
+            el = document.querySelector(".sponsorzySpoleczni");
             el2 = document.querySelector(".sponsorzySpoleczni");
             break;
         case 7:
-            el = document.querySelector("#kontakt");
+            //el = document.querySelector("#kontakt");
+            el = document.querySelector(".kontakt");
             el2 = document.querySelector(".kontakt");
             break;
         default:
@@ -65,12 +114,16 @@ const handleMenu = (n) => {
 
 const openMenu = () => {
     document.querySelector("#menu").style.display = "flex";
-    document.querySelector("body").style.overflowY = "hidden";
-    document.querySelector("body").style.height = "100vh";
+    if(window.innerWidth < 700) {
+        document.querySelector("body").style.overflowY = "hidden";
+        document.querySelector("body").style.height = "100vh";
+    }
 }
 
 const closeMenu = () => {
     document.querySelector("#menu").style.display = "none";
-    document.querySelector("body").style.overflowY = "scroll";
-    document.querySelector("body").style.height = "100vh";
+    if(window.innerWidth < 700) {
+        document.querySelector("body").style.overflowY = "scroll";
+        document.querySelector("body").style.height = "100vh";
+    }
 }

@@ -10,17 +10,18 @@ get_header();
         Archiwum
     </h2>
 
-    <div class="archiwumContainer">
+    <div class="archiwumContainer" id="content">
     <?php
     $mainQuery = new WP_Query(array(
-        'category_name' => 'Aktualności'
+        'category_name' => 'Aktualności',
+        'posts_per_page' => 100
     ));
 
     if($mainQuery->have_posts()) {
         while($mainQuery->have_posts()) {
             $mainQuery->the_post();
             ?>
-            <div class="aktualnosciItem">
+            <div class="aktualnosciItem" id="article next">
                 <h2 class="aktualnosciTitle">
                     <a href="<?php the_permalink(); ?>">
                         <?php echo the_title(); ?>

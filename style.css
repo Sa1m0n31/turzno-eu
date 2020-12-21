@@ -63,6 +63,14 @@ body {
     font-size: 32px;
 }
 
+.d-none {
+    display: none;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
 #deklaracja, #galeria, #komitetHonorowy, #sponsorzySpoleczni, #kontakt {
     position: absolute;
     top: -180px;
@@ -223,9 +231,29 @@ body {
 
 .landing {
     position: relative;
-    width: 100%;
-    height: 730px;
-    margin-top: 10px;
+    width: 80%;
+    height: calc(1500px * 0.8 / 1.5);
+    margin: 10px auto 0 auto;
+}
+
+.progressBar {
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 150px;
+    height: 4px;
+    z-index: 3;
+    background: #F4F4F4;
+}
+
+.progressBar .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #907B55;
+    z-index: 3;
 }
 
 .landing .landingBackground, .landing .landingMobile {
@@ -234,6 +262,12 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    transition: .5s opacity;
+}
+
+.landing .landingBackground {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .landing .landingMobile {
@@ -241,9 +275,9 @@ body {
 }
 
 .landing .landingTextMain {
-    font-size: 50px;
+    font-size: 30px;
     position: absolute;
-    top: 100px;
+    top: 170px;
     left: 8%;
     color: #363533;
     text-shadow: 0 0 5px #907B5526;
@@ -729,6 +763,15 @@ body {
 .sponsorzySpoleczniItem {
     position: relative;
     cursor: pointer;
+}
+
+.sponsorzyLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
 }
 
 .sponsorzySpoleczniItem img {

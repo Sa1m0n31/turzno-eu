@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e817db4f-4942-4b92-8af2-92226e6e5cdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/facebook.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/landing-mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tiktok.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/slider2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/slider5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page-archiwum.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-archiwum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-kurier-turzenski.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-kurier-turzenski.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +82,9 @@
       <workItem from="1608309511102" duration="6726000" />
       <workItem from="1608342796968" duration="1363000" />
       <workItem from="1608373033485" duration="4965000" />
-      <workItem from="1608402427734" duration="9807000" />
+      <workItem from="1608402427734" duration="10576000" />
+      <workItem from="1608465046859" duration="5619000" />
+      <workItem from="1608549393959" duration="5177000" />
     </task>
     <servers />
   </component>

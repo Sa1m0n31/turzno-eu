@@ -130,13 +130,39 @@ function turzno_add_komitet_honorowy_post_type() {
         'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
-        'menu_icon'            => 'dashicons-calendar-alt'
+        'menu_icon'            => 'dashicons-awards'
     );
 
-    register_post_type("Komitet honorowy", $args);
+    register_post_type("komitet_honorowy", $args);
 }
 
 add_action("init", "turzno_add_komitet_honorowy_post_type");
+
+function turzno_add_sponsorzy_spoleczni_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Sponsorzy społeczni'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 31,
+        'menu_icon'            => 'dashicons-admin-users'
+    );
+
+    register_post_type("sponsorzy_spoleczni", $args);
+}
+
+add_action("init", "turzno_add_sponsorzy_spoleczni_post_type");
+
 
 
 /**

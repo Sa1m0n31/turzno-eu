@@ -8,16 +8,23 @@ get_header();
 
 <!-- LANDING -->
 <main class="landing">
+    <span class="progressBar">
+        <span class="progress"></span>
+    </span>
     <span class="line big left"></span>
     <span class="line big right"></span>
     <span class="line small left smallLeft"></span>
     <span class="line small right smallRight"></span>
-    <img class="landingBackground" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing.png'; ?>" alt="turzno" />
+    <img class="landingBackground" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider1.jpg'; ?>" alt="turzno" />
+    <img class="landingBackground opacity-0" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider2.png'; ?>" alt="turzno" />
+    <img class="landingBackground opacity-0" id="slider3" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider3.jpg'; ?>" alt="turzno" />
+    <img class="landingBackground opacity-0" id="slider4" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider4.jpg'; ?>" alt="turzno" />
+    <img class="landingBackground opacity-0" id="slider5" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider5.jpg'; ?>" alt="turzno" />
     <img class="landingMobile" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing-mobile.png'; ?>" alt="turzno" />
     <h1 class="landingTextMain">
-        Lorem ipsum<br/>
-        Dolor sit amet<br/>
-        <span class="gold">Turzno Pałac Romantyczny</span>
+        Komitet do spraw rewitalizacji i promocji<br/>
+        <span class="gold">Alei Dębowo-Lipowej im. Felicji Gajewskiej</span>
+        na Smaruju w Turznie<br/>oraz innych zabytków turznieńskich
     </h1>
     <p class="landingTextMinor">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -241,7 +248,7 @@ get_header();
     <div class="videoContainer">
         <iframe src="https://www.youtube.com/embed/beKTe3G5kfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <iframe src="https://www.youtube.com/embed/beKTe3G5kfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4n3wsqG7CJU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </section>
 
@@ -374,80 +381,31 @@ get_header();
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqe.
     </p>
     <div class="sponsorzySpoleczniContainer">
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
+        <?php
 
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
+        $sponsorzyQuery = new WP_Query(array(
+           'post_type' => 'sponsorzy_spoleczni',
+            'posts_per_page' => 9
+        ));
 
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
-        <div class="sponsorzySpoleczniItem">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/skylo.png'; ?>" alt="turzno" />
-            <div class="overlay">
-                <h3 class="sponsorName">
-                    Agencja wizerunkowa Skylo
-                </h3>
-            </div>
-        </div>
+        if($sponsorzyQuery->have_posts()) {
+            while($sponsorzyQuery->have_posts()) {
+                $sponsorzyQuery->the_post(); ?>
+                <div class="sponsorzySpoleczniItem">
+                    <a class="sponsorzyLink" href="<?php echo get_field("link_do_strony_sponsora"); ?>" target="_blank" rel="noreferrer"></a>
+                    <img src="<?php echo get_field('logo_sponsora'); ?>" alt="turzno-logo-sponsora" />
+                    <div class="overlay">
+                        <h3 class="sponsorName">
+                            <?php echo get_field("nazwa_sponsora"); ?>
+                        </h3>
+                    </div>
+                </div>
+                    <?php
+                wp_reset_postdata();
+            }
+        }
+
+        ?>
     </div>
 </section>
 
