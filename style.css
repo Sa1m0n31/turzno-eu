@@ -673,7 +673,7 @@ body {
     display: block !important;
 }
 
-    /* Komitet honorowy */
+/* Komitet honorowy */
 
 .komitetHonorowy {
     margin-top: 50px;
@@ -700,15 +700,13 @@ body {
 .komitetHonorowyContainer {
     display: flex;
     justify-content: space-between;
-}
-
-.komitetHonorowyContainer .komitetHonorowyLeft, .komitetHonorowyContainer .komitetHonorowyRight {
-    width: 45%;
+    flex-wrap: wrap;
 }
 
 .komitetHonorowyItem {
+    width: 45%;
     position: relative;
-    margin: 60px 0;
+    margin: 30px 0 60px 0;
 }
 
 .komitetHonorowyItem::after {
@@ -719,12 +717,12 @@ body {
     background: #907B55;
 }
 
-.komitetHonorowyLeft .komitetHonorowyItem::after {
+.komitetHonorowyItem:nth-child(odd)::after {
     bottom: -20px;
     left: -150px;
 }
 
-.komitetHonorowyRight .komitetHonorowyItem::after {
+.komitetHonorowyItem:nth-child(even)::after {
     bottom: -20px;
     right: -150px;
 }

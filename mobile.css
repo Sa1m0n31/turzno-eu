@@ -31,7 +31,8 @@
     /* Landing */
 
     .landing {
-        height: calc(85vw / 1.89);
+        width: 100%;
+        height: calc(85vw / 1.5);
     }
 
     .landing .landingTextMain::after,
@@ -53,7 +54,7 @@
 
     .landing .landingTextMinor {
         font-size: 16px;
-        top: 290px;
+        top: 420px;
     }
 
     /* Aktualnosci */
@@ -271,6 +272,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 100%;
+        height: calc(100vw / 1.5);
     }
 
     .landing .landingTextMain, .landing .landingTextMinor {
@@ -278,6 +281,14 @@
         top: auto;
         left: auto;
         text-align: center;
+    }
+
+    .landing .landingTextMinor {
+        margin-top: 50px;
+    }
+
+    .progressBar {
+        display: none !important;
     }
 }
 
@@ -393,14 +404,20 @@
         flex-direction: column;
     }
 
-    .komitetHonorowyContainer .komitetHonorowyLeft, .komitetHonorowyContainer .komitetHonorowyRight {
+    .komitetHonorowyContainer .komitetHonorowyItem {
         width: 100%;
+    }
+
+    .komitetHonorowyContainer .komitetHonorowyItem::after {
+        bottom: -20px !important;
+        left: -150px !important;
     }
 
     /* Landing */
     .landing {
         height: 100vh;
         max-height: 700px;
+        padding: 30px;
     }
 
     .landing .landingBackground {
@@ -409,6 +426,14 @@
 
     .landing .landingMobile {
         display: block;
+    }
+
+    .landing .landingTextMain {
+        font-size: 20px;
+    }
+
+    .landing .landingTextMain .gold {
+        font-size: 24px;
     }
 
     .landing .landingTextMinor {

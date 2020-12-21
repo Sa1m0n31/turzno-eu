@@ -275,99 +275,29 @@ get_header();
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqe.
     </p>
     <div class="komitetHonorowyContainer">
-        <div class="komitetHonorowyLeft">
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
+        <?php
 
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
+        $komitetQuery = new WP_Query(array(
+                'post_type' => 'komitet_honorowy'
+        ));
 
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
+        if($komitetQuery->have_posts()) {
+            while($komitetQuery->have_posts()) {
+                $komitetQuery->the_post(); ?>
 
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
+                <div class="komitetHonorowyItem">
+                    <h3 class="name">
+                        <?php echo get_field('imie_i_nazwisko'); ?>
+                    </h3>
+                    <p class="description">
+                        <?php echo get_field('opis'); ?>
+                    </p>
+                </div>
 
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-        </div>
-
-        <div class="komitetHonorowyRight">
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-
-            <div class="komitetHonorowyItem">
-                <h3 class="name">
-                    Jan Kowalski
-                </h3>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-        </div>
+                    <?php
+            }
+        }
+        ?>
     </div>
 </section>
 
