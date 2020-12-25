@@ -10,13 +10,12 @@ window.addEventListener("scroll", () => {
 
 /* Slider */
 document.addEventListener("DOMContentLoaded", () => {
-    const s1 = document.querySelector("#slider1");
-    const s2 = document.querySelector("#slider2");
-    const s3 = document.querySelector("#slider3");
-    const s4 = document.querySelector("#slider4");
-    const s5 = document.querySelector("#slider5");
-
-    const slider = [s1, s2, s3, s4, s5];
+    const landing = document.querySelector(".landing");
+    const backgrounds = ["./wp-content/themes/turzno/img/slider1.jpg",
+                        "./wp-content/themes/turzno/img/slider2.png",
+                        "./wp-content/themes/turzno/img/slider3.jpg",
+                        "./wp-content/themes/turzno/img/slider4.jpg",
+                        "./wp-content/themes/turzno/img/slider5.jpg"];
 
     let active = 0, i;
 
@@ -24,10 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => {
         active++;
         if(active === 5) active = 0;
-        for(i=0; i<5; i++) {
-            slider[i].style.opacity = 0;
-        }
-        slider[active].style.opacity = 1;
+        landing.style
+        landing.style.background = `url(${backgrounds[active]})`;
         progressBar();
     }, 5000);
 });

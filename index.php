@@ -15,12 +15,6 @@ get_header();
     <span class="line big right"></span>
     <span class="line small left smallLeft"></span>
     <span class="line small right smallRight"></span>
-    <img class="landingBackground" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider1.jpg'; ?>" alt="turzno" />
-    <img class="landingBackground opacity-0" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider2.png'; ?>" alt="turzno" />
-    <img class="landingBackground opacity-0" id="slider3" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider3.jpg'; ?>" alt="turzno" />
-    <img class="landingBackground opacity-0" id="slider4" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider4.jpg'; ?>" alt="turzno" />
-    <img class="landingBackground opacity-0" id="slider5" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider5.jpg'; ?>" alt="turzno" />
-    <img class="landingMobile" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing-mobile.png'; ?>" alt="turzno" />
     <h1 class="landingTextMain">
         Komitet do spraw rewitalizacji i promocji<br/>
         <span class="gold">Alei Dębowo-Lipowej im. Felicji Gajewskiej</span>
