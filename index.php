@@ -20,15 +20,19 @@ get_header();
     <img class="landingBackground opacity-0" id="slider3" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider3.jpg'; ?>" alt="turzno" />
     <img class="landingBackground opacity-0" id="slider4" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider4.jpg'; ?>" alt="turzno" />
     <img class="landingBackground opacity-0" id="slider5" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider5.jpg'; ?>" alt="turzno" />
-    <img class="landingMobile" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing-mobile.png'; ?>" alt="turzno" />
-    <h1 class="landingTextMain">
-        Komitet do spraw rewitalizacji i promocji<br/>
-        <span class="gold">Alei Dębowo-Lipowej im. Felicji Gajewskiej</span>
-        na Smaruju w Turznie<br/>oraz innych zabytków turznieńskich
-    </h1>
-    <p class="landingTextMinor">
+
+    <!-- LANIND MOBILE -->
+    <img class="landingBackgroundMobile" id="slider-mobile1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile1.jpg'; ?>" alt="turzno-landing" />
+    <img class="landingBackgroundMobile" id="slider-mobile2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile2.jpg'; ?>" alt="turzno-landing" />
+    <img class="landingBackgroundMobile" id="slider-mobile3" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile3.jpg'; ?>" alt="turzno-landing" />
+    <img class="landingBackgroundMobile" id="slider-mobile4" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile4.jpg'; ?>" alt="turzno-landing" />
+    <img class="landingBackgroundMobile" id="slider-mobile5" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile5.jpg'; ?>" alt="turzno-landing" />
+
+    <img class="landingLogo" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-landing.png'; ?>" alt="turzno-komitet-logo" />
+
+    <!--<p class="landingTextMinor">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
+    </p>-->
 </main>
 
 <!-- AKTUALNOSCI -->

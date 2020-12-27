@@ -9,7 +9,32 @@ window.addEventListener("scroll", () => {
 });
 
 /* Slider */
-document.addEventListener("DOMContentLoaded", () => {
+const startMobileSlider = () => {
+
+    const m1 = document.querySelector("#slider-mobile1");
+    const m2 = document.querySelector("#slider-mobile2");
+    const m3 = document.querySelector("#slider-mobile3");
+    const m4 = document.querySelector("#slider-mobile4");
+    const m5 = document.querySelector("#slider-mobile5");
+
+    const slider = [m1, m2, m3, m4, m5];
+
+    let active = 0, i;
+
+    progressBar();
+    setInterval(() => {
+        active++;
+        if(active === 5) active = 0;
+        for(i=0; i<5; i++) {
+            slider[i].style.opacity = 0;
+        }
+        slider[active].style.opacity = 1;
+        progressBar();
+    }, 5000);
+}
+
+const startDesktopSlider = () => {
+
     const s1 = document.querySelector("#slider1");
     const s2 = document.querySelector("#slider2");
     const s3 = document.querySelector("#slider3");
@@ -30,6 +55,24 @@ document.addEventListener("DOMContentLoaded", () => {
         slider[active].style.opacity = 1;
         progressBar();
     }, 5000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth < 700) {
+        startMobileSlider();
+    }
+    else {
+       startDesktopSlider();
+    }
+});
+
+window.addEventListener("resize", () => {
+   if((window.innerWidth < 700)&&(window.innerWidth > 600)) {
+      startMobileSlider();
+   }
+   else if((window.innerWidth > 700)&&(window.innerWidth < 800)) {
+       startDesktopSlider();
+   }
 });
 
 /* Progress bar */

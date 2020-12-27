@@ -15,11 +15,7 @@
 if(is_front_page()) {
     ?>
     <header class="header headerFront">
-        <h1 class="logo" onclick="handleMenu(8)">
-            Lorem ipsum<br/>
-            Dolor sit amet
-            <span class="gold">Strona internetowa</span>
-        </h1>
+        <img class="logoHeader" onclick="handleMenu(8)" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-header.png'; ?>" alt="komitet-turzno-logo" />
 
         <menu class="mainMenu">
             <ul>
@@ -35,11 +31,11 @@ if(is_front_page()) {
         </menu>
     </header>
     <header class="mobileHeader">
-        <div class="hamburgerMenu" onclick="openMenu()">
-            <span class="hamburgerLine"></span>
-            <span class="hamburgerLine"></span>
-            <span class="hamburgerLine"></span>
-        </div>
+            <div class="hamburgerMenu" onclick="openMenu()">
+                <span class="hamburgerLine"></span>
+                <span class="hamburgerLine"></span>
+                <span class="hamburgerLine"></span>
+            </div>
         <menu class="mobileMenu" id="menu">
             <button class="exit" onclick="closeMenu()">
                 x
@@ -63,13 +59,7 @@ else {
     ?>
 
     <header class="header headerPage">
-        <h1 class="logo">
-            <a href="/public_html">
-                Lorem ipsum<br/>
-                Dolor sit amet
-                <span class="gold">Strona internetowa</span>
-            </a>
-        </h1>
+        <img class="logoHeader" onclick="handleMenu(8)" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-header.png'; ?>" alt="komitet-turzno-logo" />
 
         <menu class="mainMenu desktopOnly">
             <ul>
