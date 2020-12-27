@@ -15,8 +15,9 @@
 if(is_front_page()) {
     ?>
     <header class="header headerFront">
-        <img class="logoHeader" onclick="handleMenu(8)" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-header.png'; ?>" alt="komitet-turzno-logo" />
-
+        <a class="logo" href="/public_html">
+            <img class="logoHeader" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-turzno.png'; ?>" alt="komitet-turzno-logo" />
+        </a>
         <menu class="mainMenu">
             <ul>
                 <li onclick="handleMenu(1)">Aktualności</li>
@@ -26,7 +27,7 @@ if(is_front_page()) {
                 <li onclick="handleMenu(5)">Komitet honorowy</li>
                 <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
                 <li onclick="handleMenu(7)">Kontakt</li>
-                <li><a href="/public_html/kurier-turzenski">Kurier Turzeński</a></li>
+                <li><a href="/public_html/kurier-turzenski">Kurier Turznieński</a></li>
             </ul>
         </menu>
     </header>
@@ -48,7 +49,7 @@ if(is_front_page()) {
                 <li onclick="handleMenu(5)">Komitet honorowy</li>
                 <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
                 <li onclick="handleMenu(7)">Kontakt</li>
-                <li><a href="/public_html/kurier-turzenski">Kurier Turzeński</a></li>
+                <li><a href="/public_html/kurier-turzenski">Kurier Turznieński</a></li>
             </ul>
         </menu>
     </header>
@@ -59,7 +60,9 @@ else {
     ?>
 
     <header class="header headerPage">
-        <img class="logoHeader" onclick="handleMenu(8)" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-header.png'; ?>" alt="komitet-turzno-logo" />
+        <a class="logo" href="/public_html">
+            <img class="logoHeader" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-turzno.png'; ?>" alt="komitet-turzno-logo" />
+        </a>
 
         <menu class="mainMenu desktopOnly">
             <ul>

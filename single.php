@@ -42,7 +42,7 @@ get_header();
                     $content = explode("</p>", $content);
                     $count = count($content);
                     for ($i = 0; $i < $paragraph_count; $i++ ) {
-                        if($i == ceil($paragraph_count / 2)) {
+                        if($i == ceil($paragraph_count / 2) + 1) {
                             echo '</div><div class="right">';
                         }
                         echo $content[$i] . "</p>";

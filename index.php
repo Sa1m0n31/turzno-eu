@@ -28,11 +28,17 @@ get_header();
     <img class="landingBackgroundMobile" id="slider-mobile4" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile4.jpg'; ?>" alt="turzno-landing" />
     <img class="landingBackgroundMobile" id="slider-mobile5" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/slider-mobile5.jpg'; ?>" alt="turzno-landing" />
 
-    <img class="landingLogo" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-landing.png'; ?>" alt="turzno-komitet-logo" />
+    <h1 class="landingTextMain">
+        Komitet ds. rewitalizacji i promocji<br/>
+        <span class="gold">Alei Dębowo-Lipowej<br/>
+            im. Felicji Gajewskiej<br/></span>
+        na Smaruju w Turznie<br/>
+        oraz innych zabytków turznieńskich
+    </h1>
 
-    <!--<p class="landingTextMinor">
+    <p class="landingTextMinor">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>-->
+    </p>
 </main>
 
 <!-- AKTUALNOSCI -->
@@ -231,8 +237,11 @@ get_header();
 
             ?>
 
-
             <div class="galeriaItem">
+                <h3 class="galeriaTitle">
+                    <?php echo the_title(); ?>
+                </h3>
+
                 <?php the_content(); ?>
             </div>
 

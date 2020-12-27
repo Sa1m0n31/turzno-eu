@@ -209,7 +209,12 @@
     }
 
     /* Page header */
+    .headerPage {
+        padding-bottom: 30px;
+    }
+
     .headerPage .logo {
+        display: block;
         margin: auto !important;
     }
 
@@ -226,7 +231,7 @@
     .headerPage::after {
         content: "";
         position: absolute;
-        bottom: -5px;
+        bottom: -25px;
         left: 50%;
         transform: translateX(-50%);
         width: 80vw;
@@ -263,7 +268,7 @@
         position: absolute;
         top: -40px;
         right: -40px;
-        z-index: 15 !important;
+        z-index: 250 !important;
         background: rgba(0, 0, 0, .6);
         padding: 0 0 40px 40px;
     }
@@ -296,6 +301,11 @@
 
     .landing .landingTextMinor {
         margin-top: 50px;
+    }
+
+    /* Kurier */
+    .kurier {
+        background: #F4F4F4 !important;
     }
 }
 
@@ -492,7 +502,7 @@
     }
 
     .article .articleContent {
-        margin-top: 0;
+        margin-top: 20px;
     }
 
     .btn--backToFront {
@@ -515,6 +525,12 @@
         width: 200px;
         height: 200px;
         margin: 15px;
+    }
+
+    /* Landing */
+    .landing {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 

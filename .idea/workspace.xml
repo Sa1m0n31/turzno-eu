@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e817db4f-4942-4b92-8af2-92226e6e5cdd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/logo-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo-landing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider-mobile1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider-mobile2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider-mobile3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider-mobile4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider-mobile5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo-turzno.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -60,8 +54,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\turzno\js" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\turzno\img" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\turzno\js" />
       <recent name="C:\Users\sajmo\Downloads\turzno\turzno\img" />
     </key>
   </component>
@@ -88,7 +82,7 @@
       <workItem from="1608402427734" duration="10576000" />
       <workItem from="1608465046859" duration="5619000" />
       <workItem from="1608549393959" duration="7688000" />
-      <workItem from="1609085860588" duration="7317000" />
+      <workItem from="1609085860588" duration="18891000" />
     </task>
     <servers />
   </component>
