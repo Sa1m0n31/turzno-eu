@@ -130,6 +130,10 @@ const handleMenu = (n) => {
             el = document.querySelector(".kontakt");
             el2 = document.querySelector(".kontakt");
             break;
+        case 8:
+            el = document.querySelector(".videoSection");
+            el2 = document.querySelector(".videoSection");
+            break;
         default:
             el = document.querySelector(".container");
             el2= document.querySelector(".container");

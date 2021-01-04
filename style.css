@@ -107,10 +107,8 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    height: 220px;
+    height: 190px;
     background: #fff;
-    padding: 30px 0;
-    margin-top: 20px;
 }
 
 .mobileHeader {
@@ -120,14 +118,16 @@ body {
 .header .logoHeader {
     display: flex;
     align-self: flex-end;
-    width: 400px;
-    height: 187px;
+    width: 250px;
+    height: 165px;
     cursor: pointer;
+    margin: 15px 0;
 }
 
 .header .mainMenu ul {
     list-style-type: none;
     display: flex;
+    margin-bottom: 30px;
 }
 
 .header .mainMenu ul li {
@@ -154,6 +154,10 @@ body {
     transition: .2s ease-in-out;
 }
 
+.headerPage .logoMobile {
+    display: none;
+}
+
 /* Mobile menu */
 
 .mobileMenu {
@@ -164,7 +168,7 @@ body {
     height: 100vh;
     background: black;
     opacity: .8;
-    z-index: 220;
+    z-index: 260;
     color: #fff !important;
     justify-content: center;
     align-items: center;
@@ -192,6 +196,7 @@ body {
     color: #fff;
     background-color: transparent;
     font-family: 'Roboto', sans-serif;
+    z-index: 300;
 }
 
 /* Landing - lines */
@@ -626,17 +631,24 @@ body {
     font-size: 25px;
     text-align: center;
     position: absolute;
-    bottom: 20%;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
-    transform: translate(-50%, -20%);
-    z-index: 100;
     opacity: 0;
-    transition: .4s;
+    transition: .8s;
 }
 
 .galeriaItem:hover .galeriaTitle {
     opacity: 1;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    background-color: #907B55;
+    color: #fff;
+    z-index: 2;
 }
 
 .galeriaContainer .galeriaItem img {
@@ -667,6 +679,7 @@ body {
     color: #fff;
     font-size: 20px;
     text-align: center;
+    z-index: -1;
 }
 
 .galeriaContainer .galeriaItem:hover .overlay {
@@ -677,6 +690,7 @@ body {
 .galeria .galeriaContainer .ngg-galleryoverview {
     width: 360px !important;
     height: 300px !important;
+    margin: 0 !important;
 }
 
 .galeria .galeriaContainer .ngg-galleryoverview * {
@@ -687,9 +701,12 @@ body {
 /* Video */
 
 .videoSection, .tiktokSection {
-    margin-top: 50px;
     background: #F4F4F4;
     padding: 50px 100px;
+}
+
+.videoSection {
+    margin-top: 50px;
 }
 
 .videoContainer {

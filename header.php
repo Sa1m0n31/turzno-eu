@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-turzno.png'; ?>">
 	<?php wp_head(); ?>
 </head>
 
@@ -24,6 +24,7 @@ if(is_front_page()) {
                 <li onclick="handleMenu(2)">Turzno</li>
                 <li onclick="handleMenu(3)">Deklaracja</li>
                 <li onclick="handleMenu(4)">Galeria</li>
+                <li onclick="handleMenu(8)">Video</li>
                 <li onclick="handleMenu(5)">Komitet honorowy</li>
                 <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
                 <li onclick="handleMenu(7)">Kontakt</li>
@@ -46,6 +47,7 @@ if(is_front_page()) {
                 <li onclick="handleMenu(2)">Turzno</li>
                 <li onclick="handleMenu(3)">Deklaracja</li>
                 <li onclick="handleMenu(4)">Galeria</li>
+                <li onclick="handleMenu(8)">Video</li>
                 <li onclick="handleMenu(5)">Komitet honorowy</li>
                 <li onclick="handleMenu(6)">Sponsorzy społeczni</li>
                 <li onclick="handleMenu(7)">Kontakt</li>
@@ -60,8 +62,11 @@ else {
     ?>
 
     <header class="header headerPage">
-        <a class="logo" href="/public_html">
+        <a class="logo logoDesktop" href="/public_html">
             <img class="logoHeader" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-turzno.png'; ?>" alt="komitet-turzno-logo" />
+        </a>
+        <a class="logo logoMobile" href="/public_html">
+            <img class="logoHeader" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/logo-mobile.png'; ?>" alt="komitet-turzno-logo" />
         </a>
 
         <menu class="mainMenu desktopOnly">

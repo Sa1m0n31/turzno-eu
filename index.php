@@ -2,7 +2,7 @@
 get_header();
 ?>
 <!-- MoveUpBtn -->
-<button class="moveUpBtn" onclick="handleMenu(8)">
+<button class="moveUpBtn" onclick="handleMenu(9)">
     ^
 </button>
 

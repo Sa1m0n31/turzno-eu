@@ -28,7 +28,11 @@
         font-size: calc(25px + 10 * ((100vw - 400px)/(1200)));
     }
 
-    /* Landing */
+    .header .mainMenu ul li {
+        text-align: center;
+    }
+
+        /* Landing */
 
     .landing {
         width: 100%;
@@ -214,7 +218,11 @@
     }
 
     .headerPage .logo {
-        display: block;
+        display: none !important;
+    }
+
+    .headerPage .logoMobile {
+        display: block !important;
         margin: auto !important;
     }
 
@@ -300,7 +308,7 @@
     }
 
     .landing .landingTextMinor {
-        margin-top: 50px;
+        display: none;
     }
 
     /* Kurier */
@@ -464,10 +472,6 @@
 
     .landing .landingTextMain .gold {
         font-size: 24px;
-    }
-
-    .landing .landingTextMinor {
-        display: none;
     }
 
     /* Kontakt */
