@@ -712,6 +712,7 @@ body {
 .videoContainer {
     margin-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 1300px;
 }
@@ -722,6 +723,7 @@ body {
     height: 315px;
     -webkit-box-shadow: 0 0 9px 0 #000000;
     box-shadow: 0 0 9px 0 #000000;
+    margin-bottom: 50px;
 }
 
 .tiktokContainer {
@@ -734,6 +736,17 @@ body {
 
 .tiktok-feed-item:first-child, .tiktok-feed-item:nth-child(2), .tiktok-feed-item:nth-child(3) {
     display: block !important;
+}
+
+.instagramContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.instagramContainer blockquote {
+    width: 45% !important;
+    margin: 30px 0 !important;
 }
 
 /* Komitet honorowy */
