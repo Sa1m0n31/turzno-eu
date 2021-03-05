@@ -1,5 +1,3 @@
-console.log("hello");
-
 /* MoveUpBtn */
 window.addEventListener("scroll", () => {
     if(window.pageYOffset > 300) {
@@ -10,87 +8,46 @@ window.addEventListener("scroll", () => {
     }
 });
 
-/* Slider */
-const startMobileSlider = () => {
+const sliderBtn1 = document.querySelector("#sliderBtn1");
+const sliderBtn2 = document.querySelector("#sliderBtn2");
+const sliderBtn3 = document.querySelector("#sliderBtn3");
+const sliderBtn4 = document.querySelector("#sliderBtn4");
+const sliderBtn5 = document.querySelector("#sliderBtn5");
 
-    const m1 = document.querySelector("#slider-mobile1");
-    const m2 = document.querySelector("#slider-mobile2");
-    const m3 = document.querySelector("#slider-mobile3");
-    const m4 = document.querySelector("#slider-mobile4");
-    const m5 = document.querySelector("#slider-mobile5");
+const sliderButtons = [sliderBtn1, sliderBtn2, sliderBtn3, sliderBtn4, sliderBtn5];
 
-    const slider = [m1, m2, m3, m4, m5];
-
-    let active = 0, i;
-
-    progressBar();
-    setInterval(() => {
-        active++;
-        if(active === 5) active = 0;
-        for(i=0; i<5; i++) {
-            slider[i].style.opacity = 0;
-        }
-        slider[active].style.opacity = 1;
-        progressBar();
-    }, 5000);
-}
-
-const startDesktopSlider = () => {
-
-    const s1 = document.querySelector("#slider1");
-    const s2 = document.querySelector("#slider2");
-    const s3 = document.querySelector("#slider3");
-    const s4 = document.querySelector("#slider4");
-    const s5 = document.querySelector("#slider5");
-
-    const slider = [s1, s2, s3, s4, s5];
-
-    let active = 0, i;
-
-    progressBar();
-    setInterval(() => {
-        active++;
-        if(active === 5) active = 0;
-        for(i=0; i<5; i++) {
-            slider[i].style.opacity = 0;
-        }
-        slider[active].style.opacity = 1;
-        progressBar();
-    }, 5000);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    if(window.innerWidth < 700) {
-        startMobileSlider();
-    }
-    else {
-       startDesktopSlider();
+let siemaSlider = new Siema({
+    selector: '.siemaContainer',
+    perPage: 1,
+    loop: true,
+    onChange: () => {
+        goTo(siemaSlider.currentSlide);
     }
 });
 
-window.addEventListener("resize", () => {
-   if((window.innerWidth < 700)&&(window.innerWidth > 600)) {
-      startMobileSlider();
-   }
-   else if((window.innerWidth > 700)&&(window.innerWidth < 800)) {
-       startDesktopSlider();
-   }
-});
-
-/* Progress bar */
-const progressBar = () => {
-    let width = 0, widthStr;
-    const progress = document.querySelector(".progress");
-    let interval = setInterval(() => {
-        width += 1;
-        widthStr = width + "%";
-        progress.style.width = widthStr;
-    }, 50);
-    setTimeout(() => {
-        clearInterval(interval);
-        progress.style.width = "0";
-    }, 5000);
+const goTo = (n) => {
+    sliderButtons.forEach(item => {
+        item.style.background = "#fff";
+    });
+    sliderButtons[n].style.background = "#907B55";
+    siemaSlider.goTo(n);
 }
+
+
+// /* Progress bar */
+// const progressBar = () => {
+//     let width = 0, widthStr;
+//     const progress = document.querySelector(".progress");
+//     let interval = setInterval(() => {
+//         width += 1;
+//         widthStr = width + "%";
+//         progress.style.width = widthStr;
+//     }, 50);
+//     setTimeout(() => {
+//         clearInterval(interval);
+//         progress.style.width = "0";
+//     }, 5000);
+// }
 
 
 /* Menu */

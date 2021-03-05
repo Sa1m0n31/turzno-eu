@@ -172,7 +172,8 @@ function turzno_scripts() {
 	wp_enqueue_style( 'turzno-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style("turzno-mobile", get_template_directory_uri() . "/mobile.css", array(), _S_VERSION);
 
-	wp_enqueue_script( 'turzno-js', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'turzno-js', get_template_directory_uri() . '/js/main.js', array('siema-js'), _S_VERSION, true );
+	wp_enqueue_script( 'siema-js', get_template_directory_uri() . '/js/siema.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
