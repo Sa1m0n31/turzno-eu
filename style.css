@@ -548,8 +548,9 @@ body {
 }
 
 .turzno .turznoParagraphText {
-    margin: 5px 0;
+    margin: 25px 0;
     font-weight: 300;
+    text-align: justify;
 }
 
 .turzno .right img {
@@ -560,6 +561,20 @@ body {
 
 .turzno .textInside {
     margin-top: 20px;
+}
+
+.turznoParagraphPodpis {
+    margin-top: 40px;
+    padding-left: 30px;
+    font-weight: 700;
+}
+
+.turznoQuote {
+    color: #907B55;
+}
+
+.marginTop50 {
+    margin-top: 50px !important;
 }
 
 /* Deklaracja */
@@ -827,16 +842,21 @@ body {
 .sponsorzySpoleczniContainer {
     margin: 50px auto 0 auto;
     width: 850px;
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: repeat(3, 250px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     grid-row-gap: 50px;
-    grid-column-gap: 50px;
 }
 
 .sponsorzySpoleczniItem {
     position: relative;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
 }
 
 .sponsorzyLink {
@@ -851,7 +871,7 @@ body {
 
 .sponsorzySpoleczniItem img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .sponsorzySpoleczniItem .overlay {

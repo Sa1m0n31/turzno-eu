@@ -1,3 +1,5 @@
+console.log("hello");
+
 /* MoveUpBtn */
 window.addEventListener("scroll", () => {
     if(window.pageYOffset > 300) {
