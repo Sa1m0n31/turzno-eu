@@ -1,5 +1,5 @@
-turzno.eu website
+# turzno.eu
 
 Website for local social association.
 
-Stack: HTML, CSS, Javascript, WordPRess
+<b>Stack</b>: HTML, CSS, Javascript, WordPRess
